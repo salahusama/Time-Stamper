@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Time Stamper</string>
+    <string name="view_btn">View Calendar</string>
+    <string name="stamp_btn">Stamp Now</string>
 </resources>
