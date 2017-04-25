@@ -18,8 +18,12 @@
         </activity>
         <activity
             android:name=".Stamp"
-            android:parentActivityName=".Home"></activity>
-        <activity android:name=".Calendar"></activity>
+            android:parentActivityName=".Home">
+        </activity>
+        <activity
+            android:name=".Calendar"
+            android:parentActivityName=".Home">
+        </activity>
     </application>
 
 </manifest>
