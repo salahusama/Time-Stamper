@@ -21,5 +21,9 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    
+    // called when stamp_button pressed
+    public void stamp(View view) {
+        Intent intent = new Intent(this, StampActivity.class);
+        startActivity(intent);
+    }
 }
