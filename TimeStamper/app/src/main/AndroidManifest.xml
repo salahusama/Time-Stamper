@@ -17,15 +17,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Calendar"
-            android:parentActivityName=".Home"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_calendar"
-            android:theme="@style/FullscreenTheme" />
-        <activity
             android:name=".Stamp"
-            android:parentActivityName=".Home" >
-        </activity>
+            android:parentActivityName=".Home"></activity>
+        <activity android:name=".Calendar"></activity>
     </application>
 
 </manifest>
