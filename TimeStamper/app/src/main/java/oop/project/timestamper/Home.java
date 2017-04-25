@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
-
 public class Home extends AppCompatActivity {
 
     @Override
@@ -17,13 +15,13 @@ public class Home extends AppCompatActivity {
 
     // called when view_button pressed
     public void viewCalendar(View view) {
-        Intent intent = new Intent(this, CalendarActivity.class);
+        Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
     }
 
     // called when stamp_button pressed
     public void stamp(View view) {
-        Intent intent = new Intent(this, StampActivity.class);
+        Intent intent = new Intent(this, Stamp.class);
         startActivity(intent);
     }
 }

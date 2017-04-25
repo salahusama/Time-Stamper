@@ -17,10 +17,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CalendarActivity"
+            android:name=".Calendar"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_calendar"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".Stamp"></activity>
     </application>
 
 </manifest>
