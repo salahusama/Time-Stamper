@@ -46,7 +46,7 @@ public class Day {
 
     public void display() {
         parent.noFill();
-        parent.stroke(color);
+        parent.stroke(255);
         parent.strokeWeight(10);
         parent.rect(startX, startY, dayWidth, dayHeight);
     }
