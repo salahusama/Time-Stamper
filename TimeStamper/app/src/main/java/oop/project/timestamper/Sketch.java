@@ -28,15 +28,22 @@ public class Sketch extends PApplet {
 
     public void draw() {
         background(0);
+        pushMatrix();
         translate(currX, 0);
         year.display();
+        popMatrix();
 
         if (mousePressed) {
             ellipse(mouseX, mouseY, 50, 50);
 
-            float mouseX_diff = mouseX - last_mouseX;
-            currX += mouseX_diff;
-            last_mouseX = mouseX;
+            last_mouseX = currX;
+
+            if (last_mouseX > mouseX) {
+                currX -= 10;
+            }
+            else if (last_mouseX < mouseX) {
+                currX += 10;
+            }
         }
 
 
