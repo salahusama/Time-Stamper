@@ -11,6 +11,7 @@ public class Sketch extends PApplet {
     float dayWidth;
     float dayHeight;
     Year year;
+    String stampTitle;
 
     public void settings() {
         fullScreen();
