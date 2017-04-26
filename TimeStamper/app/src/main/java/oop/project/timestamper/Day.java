@@ -48,6 +48,13 @@ public class Day {
         parent.noFill();
         parent.stroke(255);
         parent.strokeWeight(10);
-        parent.rect(startX, startY, dayWidth, dayHeight);
+
+        parent.pushMatrix();
+        parent.translate(startX, startY);
+        parent.rect(0, 0, dayWidth, dayHeight);
+
+        parent.fill(255);
+        parent.text(date.date + " " + date.month + "" + "2017", 50, 50);
+        parent.popMatrix();
     }
 }
