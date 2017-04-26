@@ -38,6 +38,8 @@ public class Day {
         this.dayWidth = dayWidth;
         this.dayHeight = dayHeight;
         this.headHeight = 0.2f * dayHeight;
+
+        this.tasks = new ArrayList<String>();
     }
 
     public Day(PApplet parent, String month, int date, float startX, float startY, float dayWidth, float dayHeight, int red, int green, int blue) {
@@ -49,6 +51,8 @@ public class Day {
         this.dayHeight = dayHeight;
         this.headHeight = 0.2f * dayHeight;
         this.color = parent.color(red, green, blue);
+
+        this.tasks = new ArrayList<String>();
     }
 
     public void display() {
@@ -60,7 +64,7 @@ public class Day {
         parent.translate(startX, startY);
         parent.rect(0, 0, dayWidth, dayHeight);
 
-        parent.fill(255);
+        parent.fill(0);
         parent.textSize(40);
         parent.textAlign(parent.CENTER, parent.CENTER);
         parent.text(date.date + " " + date.month + "" + "2017", dayWidth/2, headHeight/2);
@@ -75,7 +79,7 @@ public class Day {
             parent.fill(255);
             parent.textSize(40);
             parent.textAlign(parent.LEFT, parent.CENTER);
-            parent.text(date.date + " " + date.month + "" + "2017", dayWidth/2, headHeight + 50 + taskY);
+            parent.text("> " + task, 50, headHeight + 50 + taskY);
             taskY += 50;
         }
     }
