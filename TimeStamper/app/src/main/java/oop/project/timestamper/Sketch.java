@@ -36,16 +36,17 @@ public class Sketch extends PApplet {
         if (mousePressed) {
             ellipse(mouseX, mouseY, 50, 50);
 
+            // horizontal scrolling
             last_mouseX = currX;
-
             if (last_mouseX > mouseX) {
+                last_mouseX = currX;
                 currX -= 10;
             }
             else if (last_mouseX < mouseX) {
+                last_mouseX = currX;
                 currX += 10;
             }
         }
-
 
     }
 }
