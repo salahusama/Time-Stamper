@@ -20,7 +20,7 @@ public class Sketch extends PApplet {
         dayHeight = height;
         dayWidth = width / 5;
 
-        year = new Year(this);
+        year = new Year(this, dayWidth, dayHeight);
     }
 
     public void draw() {
