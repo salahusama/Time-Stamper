@@ -3,6 +3,10 @@
     <string name="view_btn">View Calendar</string>
     <string name="stamp_btn">Stamp Now</string>
 
+    <string name="stamp_text_display">Enter your STAMP title</string>
+    <string name="stamp_edit_text">Enter a Stamp...</string>
+    <string name="stamp_submit">STAMP!</string>
+
     <string name="title_activity_calendar">CalendarActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>

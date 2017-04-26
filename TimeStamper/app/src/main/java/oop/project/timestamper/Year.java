@@ -47,7 +47,6 @@ public class Year {
             for (int j = 1; j <= monthLen[i]; j++) {
                 // a day with month and date set
                 Day day = new Day(parent, months[i], j, startX, startY, dayWidth, dayHeight, red, green, blue);
-                day.addTask("Die");
                 days.add(day);
                 startX += gap + dayWidth;
             }

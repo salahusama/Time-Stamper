@@ -64,14 +64,13 @@ public class Day {
         parent.translate(startX, startY);
         parent.rect(0, 0, dayWidth, dayHeight);
 
-        parent.fill(0);
+        parent.fill(color);
+        parent.line(0, headHeight, dayWidth, headHeight);
+
+        parent.fill(255);
         parent.textSize(40);
         parent.textAlign(parent.CENTER, parent.CENTER);
         parent.text(date.date + " " + date.month + "" + "2017", dayWidth/2, headHeight/2);
-
-        parent.fill(color);
-        parent.rect(0, 0, dayWidth, headHeight);
-        parent.popMatrix();
 
         float taskY = 0;
 
@@ -82,6 +81,7 @@ public class Day {
             parent.text("> " + task, 50, headHeight + 50 + taskY);
             taskY += 50;
         }
+        parent.popMatrix();
     }
 
     public void addTask(String taskTitle) {
