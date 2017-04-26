@@ -33,17 +33,12 @@ public class Sketch extends PApplet {
 
         if (mousePressed) {
             ellipse(mouseX, mouseY, 50, 50);
+
+            float mouseX_diff = mouseX - last_mouseX;
+            currX += mouseX_diff;
+            last_mouseX = mouseX;
         }
 
-    }
 
-    public void mouseDragged() {
-        float mouseX_diff = mouseX - last_mouseX;
-        currX += mouseX_diff;
-        last_mouseX = mouseX;
-    }
-
-    public void mouseReleased() {
-        last_mouseX = mouseX;
     }
 }
