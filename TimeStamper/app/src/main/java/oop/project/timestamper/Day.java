@@ -34,14 +34,7 @@ public class Day {
         this.startY = startY;
         this.dayWidth = dayWidth;
         this.dayHeight = dayHeight;
-    }
-
-    public Day(PApplet parent, float startX, float startY, int red, int green, int blue) {
-        this.parent = parent;
-        //this.dayWidth = dayWidth;
-        //this.dayHeight = dayHeight;
-        this.headHeight = 0.20f * dayHeight;
-        this.color = parent.color(red, green, blue);
+        this.headHeight = 0.2f * dayHeight;
     }
 
     public void display() {
@@ -54,7 +47,11 @@ public class Day {
         parent.rect(0, 0, dayWidth, dayHeight);
 
         parent.fill(255);
-        parent.text(date.date + " " + date.month + "" + "2017", 50, 50);
+        parent.textSize(40);
+        parent.textAlign(parent.CENTER, parent.CENTER);
+        parent.text(date.date + " " + date.month + "" + "2017", dayWidth/2, headHeight/2);
+
+        parent.line(0, headHeight, dayWidth, headHeight);
         parent.popMatrix();
     }
 }
