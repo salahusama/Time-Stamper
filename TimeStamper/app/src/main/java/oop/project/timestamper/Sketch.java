@@ -8,19 +8,24 @@ import processing.core.PApplet;
 
 
 public class Sketch extends PApplet {
+    float dayWidth;
+    float dayHeight;
+    Year year;
+
     public void settings() {
         fullScreen();
     }
 
-    Day day;
-
     public void setup() {
-        day = new Day(this, 0, 0, width/5, height, 255, 255, 255);
+        dayHeight = height;
+        dayWidth = width / 5;
+
+        year = new Year(this);
     }
 
     public void draw() {
         background(0);
-        day.display();
+        year.display();
 
         if (mousePressed) {
             ellipse(mouseX, mouseY, 50, 50);
