@@ -23,12 +23,27 @@ public class Sketch extends PApplet {
         year = new Year(this, dayWidth, dayHeight);
     }
 
+    float currX = 0;
+    float last_mouseX;
+
     public void draw() {
         background(0);
+        translate(currX, 0);
         year.display();
 
         if (mousePressed) {
             ellipse(mouseX, mouseY, 50, 50);
         }
+
+    }
+
+    public void mouseDragged() {
+        float mouseX_diff = mouseX - last_mouseX;
+        currX += mouseX_diff;
+        last_mouseX = mouseX;
+    }
+
+    public void mouseReleased() {
+        last_mouseX = mouseX;
     }
 }
