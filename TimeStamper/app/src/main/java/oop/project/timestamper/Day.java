@@ -44,14 +44,10 @@ public class Day {
         this.color = parent.color(red, green, blue);
     }
 
-    private void makeShape() {
+    public void display() {
         parent.noFill();
         parent.stroke(color);
         parent.strokeWeight(10);
         parent.rect(startX, startY, dayWidth, dayHeight);
-    }
-
-    public void display() {
-        makeShape();
     }
 }
