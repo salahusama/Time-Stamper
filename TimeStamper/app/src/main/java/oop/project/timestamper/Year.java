@@ -39,11 +39,14 @@ public class Year {
         float startY = 0;
         float gap = dayWidth * 0.10f;
 
+        int red = 255;
+        int green = 255;
+        int blue = 255;
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < months.length; i++) {
             for (int j = 1; j <= monthLen[i]; j++) {
                 // a day with month and date set
-                days.add( new Day(parent, months[i], j, startX, startY, dayWidth, dayHeight) );
+                days.add( new Day(parent, months[i], j, startX, startY, dayWidth, dayHeight, red, green, blue) );
                 startX += gap + dayWidth;
             }
         }
